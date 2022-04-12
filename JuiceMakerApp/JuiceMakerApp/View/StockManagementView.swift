@@ -19,6 +19,13 @@ struct StockManagementView: View {
                 }
             }
         }
+        .onDisappear {
+            for (fruit, count) in viewModel.fruitBag {
+                viewModel.addStock(fruit: fruit, stock: count)
+            }
+            
+            viewModel.resetStock()
+        }
     }
 }
 
