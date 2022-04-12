@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 class FruitStore: ObservableObject {
-    var fruitStore = [Fruit: Int]()
+    @Published var fruitStore = [Fruit: Int]()
     
     private var cancellable: AnyCancellable? = nil
     
@@ -29,33 +29,42 @@ class FruitStore: ObservableObject {
         })
     }
     
-    func substractStock(juice: Juice, dict: inout [Fruit: Int]) {
-        var temp = [Fruit: Int]()
-        
-        for (fruit, count) in juice.recipe {
-            guard let stock = self.readStock(dict: dict, fruit: fruit) else {
-                temp.removeAll()
-                break
-            }
-            
-            if stock >= count {
-                temp.updateValue(stock - count, forKey: fruit)
-            } else {
-                temp.removeAll()
-                break
-            }
-        }
-        
-        self.fruitStore.merge(temp) { _, new in
-            return new
-        }
-    }
-    
     private func readStock(dict: [Fruit: Int], fruit: Fruit) -> Int? {
         guard let stock = dict[fruit] else {
             return nil
         }
         
         return stock
+    }
+    
+    private func searchStock(juice: Juice) -> [Fruit: Int] {
+        var dict = [Fruit: Int]()
+        
+        for (fruit, count) in juice.recipe {
+            guard let stock = self.readStock(dict: fruitStore, fruit: fruit) else {
+                dict.removeAll()
+                break
+            }
+            
+            if stock >= count {
+                dict.updateValue(stock - count, forKey: fruit)
+            } else {
+                dict.removeAll()
+                break
+            }
+        }
+        
+        return dict
+    }
+    
+    func substractStock(juice: Juice) {
+        let temp = searchStock(juice: juice)
+        print(temp)
+        
+        self.fruitStore.merge(temp) { _, new in
+            return new
+        }
+        
+        print(fruitStore)
     }
 }

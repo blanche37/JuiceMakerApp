@@ -29,8 +29,9 @@ struct ContentView: View {
             .navigationTitle("맛있는 쥬스를 만들어 드려요!")
         }
         .navigationViewStyle(.stack)
-    }
+    }    
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
