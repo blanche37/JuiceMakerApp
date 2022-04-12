@@ -38,8 +38,8 @@ class FruitStore: ObservableObject {
         }).store(in: &cancellables)
     }
     
-    private func readStock(dict: [Fruit: Int], fruit: Fruit) -> Int? {
-        guard let stock = dict[fruit] else {
+    private func readStock(fruit: Fruit) -> Int? {
+        guard let stock = fruitStore[fruit] else {
             return nil
         }
         
@@ -50,7 +50,7 @@ class FruitStore: ObservableObject {
         var dict = [Fruit: Int]()
         
         for (fruit, count) in juice.recipe {
-            guard let stock = self.readStock(dict: fruitStore, fruit: fruit) else {
+            guard let stock = self.readStock(fruit: fruit) else {
                 dict.removeAll()
                 break
             }
