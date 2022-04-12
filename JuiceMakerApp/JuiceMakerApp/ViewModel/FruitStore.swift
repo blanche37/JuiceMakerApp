@@ -10,6 +10,7 @@ import Combine
 
 class FruitStore: ObservableObject {
     @Published var fruitStore = [Fruit: Int]()
+    @Published var fruitBag = [Fruit: Int]()
     
     private var cancellable: AnyCancellable? = nil
     
