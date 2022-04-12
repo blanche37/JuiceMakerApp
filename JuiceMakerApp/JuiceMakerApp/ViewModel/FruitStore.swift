@@ -91,7 +91,8 @@ class FruitStore: ObservableObject {
     }
     
     func minusStock(fruit: Fruit) {
-        guard let currentStock = fruitBag[fruit] else {
+        guard let currentStock = fruitBag[fruit],
+              currentStock > 0 else {
             return
         }
         
