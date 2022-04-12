@@ -9,6 +9,11 @@ import SwiftUI
 
 struct StockManagementView: View {
     @ObservedObject var viewModel: FruitStore
+    //    @State var strawberry = 0
+    //    @State var banana = 0
+    //    @State var kiwi = 0
+    //    @State var pineapple = 0
+    //    @State var mango = 0
     
     var body: some View {
         HStack {
@@ -16,12 +21,31 @@ struct StockManagementView: View {
                 VStack(spacing: 0) {
                     FruitView(fruit: fruit)
                     CountView(dict: $viewModel.fruitBag, fruit: fruit)
+                        .padding(.bottom, 10)
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                        HStack(spacing: 0) {
+                            Button {
+                                viewModel.addStock(fruit: fruit)
+                            } label: {
+                                Text("+")
+                            }
+                            .frame(width: 50, height: 30)
+                            Button {
+                                viewModel.minusStock(fruit: fruit)
+                            } label: {
+                                Text("-")
+                            }
+                            .frame(width: 50, height: 30)
+                        }
+                    }
+                    .frame(width: 100, height: 30)
                 }
             }
         }
         .onDisappear {
             for (fruit, count) in viewModel.fruitBag {
-                viewModel.addStock(fruit: fruit, stock: count)
+                viewModel.calculateStock(fruit: fruit, stock: count)
             }
             
             viewModel.resetStock()
