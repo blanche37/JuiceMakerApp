@@ -21,6 +21,7 @@ struct ContentView: View {
                         FruitView(fruit: fruit)
                         CountView(dict: $viewModel.fruitStore, fruit: fruit)
                     }
+                    .padding()
                 }
             }
         }
