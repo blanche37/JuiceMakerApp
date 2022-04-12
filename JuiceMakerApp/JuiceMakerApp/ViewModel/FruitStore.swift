@@ -81,4 +81,18 @@ class FruitStore: ObservableObject {
         
         fruitStore.updateValue(currentStock + stock, forKey: fruit)
     }
+    
+    func resetStock() {
+        self.fruitBag.removeAll()
+        
+        let publisher = Fruit.allCases.publisher
+        
+        publisher.sink(receiveValue: { [weak self] fruit in
+            guard let self = self else {
+                return
+            }
+            
+            self.fruitBag.updateValue(0, forKey: fruit)
+        }).store(in: &cancellables)
+    }
 }
