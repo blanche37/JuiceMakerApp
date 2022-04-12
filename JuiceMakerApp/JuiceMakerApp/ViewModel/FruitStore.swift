@@ -67,4 +67,12 @@ class FruitStore: ObservableObject {
         
         print(fruitStore)
     }
+    
+    func addStock(fruit: Fruit, stock: Int) {
+        guard let currentStock = fruitStore[fruit] else {
+            return
+        }
+        
+        fruitStore.updateValue(currentStock + stock, forKey: fruit)
+    }
 }
