@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct FruitView: View {
+    let fruit: Fruit
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(fruit.rawValue)
+            .font(.system(size: 100))
     }
 }
 
 struct FruitView_Previews: PreviewProvider {
     static var previews: some View {
-        FruitView()
+        
+        
+        ForEach(Fruit.allCases) { fruit in
+            FruitView(fruit: fruit)
+                .previewLayout(PreviewLayout.fixed(width: 100, height: 100))
+        }
     }
 }
