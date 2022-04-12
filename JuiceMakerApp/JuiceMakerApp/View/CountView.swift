@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CountView: View {
     @Binding var dict: [Fruit: Int]
-    
     let fruit: Fruit
     
     var body: some View {

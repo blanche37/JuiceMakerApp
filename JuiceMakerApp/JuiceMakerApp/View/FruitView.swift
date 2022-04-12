@@ -18,8 +18,6 @@ struct FruitView: View {
 
 struct FruitView_Previews: PreviewProvider {
     static var previews: some View {
-        
-        
         ForEach(Fruit.allCases) { fruit in
             FruitView(fruit: fruit)
                 .previewLayout(PreviewLayout.fixed(width: 100, height: 100))
