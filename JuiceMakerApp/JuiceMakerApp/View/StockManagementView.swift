@@ -13,9 +13,18 @@ struct StockManagementView: View {
     var body: some View {
         HStack {
             ForEach(Fruit.allCases) { fruit in
-                FruitView(fruit: fruit)
-                Spacer()
+                VStack(spacing: 0) {
+                    FruitView(fruit: fruit)
+                    CountView(dict: $viewModel.fruitBag, fruit: fruit)
+                }
             }
         }
+    }
+}
+
+struct StockManagementView_Previews: PreviewProvider {
+    static var previews: some View {
+        StockManagementView(viewModel: FruitStore())
+            .previewInterfaceOrientation(.landscapeLeft)
     }
 }
