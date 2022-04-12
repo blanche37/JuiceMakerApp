@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel = FruitStore()
+    private var juice: [[Juice]] = [[.strawberry, .strawberryBanana, .mangoKiwi], [.banana, .pineapple, .mango, .kiwi]]
     
     var body: some View {
         NavigationView {
