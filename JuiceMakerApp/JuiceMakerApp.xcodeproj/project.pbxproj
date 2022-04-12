@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		436EBD6E2805A6B800001155 /* FruitStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436EBD6D2805A6B800001155 /* FruitStore.swift */; };
 		43EBCA8F27FF2E8B003A3437 /* JuiceMakerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EBCA8E27FF2E8B003A3437 /* JuiceMakerAppApp.swift */; };
 		43EBCA9127FF2E8B003A3437 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EBCA9027FF2E8B003A3437 /* ContentView.swift */; };
 		43EBCA9327FF2E8D003A3437 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43EBCA9227FF2E8D003A3437 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		436EBD6D2805A6B800001155 /* FruitStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitStore.swift; sourceTree = "<group>"; };
 		43EBCA8B27FF2E8B003A3437 /* JuiceMakerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuiceMakerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43EBCA8E27FF2E8B003A3437 /* JuiceMakerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMakerAppApp.swift; sourceTree = "<group>"; };
 		43EBCA9027FF2E8B003A3437 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				43EBCA8E27FF2E8B003A3437 /* JuiceMakerAppApp.swift */,
 				43EBCA9027FF2E8B003A3437 /* ContentView.swift */,
+				436EBD6D2805A6B800001155 /* FruitStore.swift */,
 				43EBCA9227FF2E8D003A3437 /* Assets.xcassets */,
 				43EBCA9427FF2E8D003A3437 /* Preview Content */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				43EBCA9127FF2E8B003A3437 /* ContentView.swift in Sources */,
 				43EBCA8F27FF2E8B003A3437 /* JuiceMakerAppApp.swift in Sources */,
+				436EBD6E2805A6B800001155 /* FruitStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
