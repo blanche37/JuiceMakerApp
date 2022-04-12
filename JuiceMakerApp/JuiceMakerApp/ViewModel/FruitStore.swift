@@ -28,4 +28,34 @@ class FruitStore: ObservableObject {
             self.fruitStore.updateValue(10, forKey: fruit)
         })
     }
+    
+    func substractStock(juice: Juice, dict: inout [Fruit: Int]) {
+        var temp = [Fruit: Int]()
+        
+        for (fruit, count) in juice.recipe {
+            guard let stock = self.readStock(dict: dict, fruit: fruit) else {
+                temp.removeAll()
+                break
+            }
+            
+            if stock >= count {
+                temp.updateValue(stock - count, forKey: fruit)
+            } else {
+                temp.removeAll()
+                break
+            }
+        }
+        
+        self.dict.merge(temp) { _, new in
+            return new
+        }
+    }
+    
+    private func readStock(dict: [Fruit: Int], fruit: Fruit) -> Int? {
+        guard let stock = dict[fruit] else {
+            return nil
+        }
+        
+        return stock
+    }
 }
