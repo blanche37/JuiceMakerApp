@@ -9,11 +9,6 @@ import SwiftUI
 
 struct StockManagementView: View {
     @ObservedObject var viewModel: FruitStore
-    //    @State var strawberry = 0
-    //    @State var banana = 0
-    //    @State var kiwi = 0
-    //    @State var pineapple = 0
-    //    @State var mango = 0
     
     var body: some View {
         HStack {
