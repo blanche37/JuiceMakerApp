@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FruitManagementView: View {
+struct StockManagementView: View {
     @ObservedObject var viewModel: FruitStore
     
     var body: some View {

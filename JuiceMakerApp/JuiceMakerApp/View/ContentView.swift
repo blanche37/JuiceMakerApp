@@ -41,6 +41,13 @@ struct ContentView: View {
                     }
                 }
             }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink("재고 수정") {
+                        StockManagementView(viewModel: viewModel)
+                    }
+                }
+            }
             .navigationTitle("맛있는 쥬스를 만들어 드려요!")
         }
         .navigationViewStyle(.stack)
