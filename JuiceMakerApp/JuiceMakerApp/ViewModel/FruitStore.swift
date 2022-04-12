@@ -46,7 +46,7 @@ class FruitStore: ObservableObject {
             }
         }
         
-        self.dict.merge(temp) { _, new in
+        self.fruitStore.merge(temp) { _, new in
             return new
         }
     }
