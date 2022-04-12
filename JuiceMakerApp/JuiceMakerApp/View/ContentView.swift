@@ -11,7 +11,7 @@ struct ContentView: View {
     @ObservedObject var viewModel = FruitStore()
     
     var body: some View {
-        HStack {
+        HStack(spacing: 20) {
             ForEach(Fruit.allCases) { fruit in
                 ZStack {
                     RoundedRectangle(cornerRadius: 20)
