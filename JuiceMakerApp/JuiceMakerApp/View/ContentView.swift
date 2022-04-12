@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel = FruitStore()
+    
     var body: some View {
         HStack {
             ForEach(Fruit.allCases) { fruit in
@@ -15,7 +17,10 @@ struct ContentView: View {
                     RoundedRectangle(cornerRadius: 20)
                         .frame(width: 120, height: 180)
                         .foregroundColor(.pink)
-                    FruitView(fruit: fruit)
+                    VStack(spacing: 0) {
+                        FruitView(fruit: fruit)
+                        CountView(dict: $viewModel.fruitStore, fruit: fruit)
+                    }
                 }
             }
         }
