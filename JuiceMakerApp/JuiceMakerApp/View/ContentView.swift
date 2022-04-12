@@ -13,17 +13,31 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            HStack(spacing: 20) {
-                ForEach(Fruit.allCases) { fruit in
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 20)
-                            .frame(width: 120, height: 180)
-                            .foregroundColor(.pink)
-                        VStack(spacing: 0) {
-                            FruitView(fruit: fruit)
-                            CountView(dict: $viewModel.fruitStore, fruit: fruit)
+            VStack {
+                HStack(spacing: 20) {
+                    ForEach(Fruit.allCases) { fruit in
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 20)
+                                .frame(width: 120, height: 180)
+                                .foregroundColor(.pink)
+                            VStack(spacing: 0) {
+                                FruitView(fruit: fruit)
+                                CountView(dict: $viewModel.fruitStore, fruit: fruit)
+                            }
+                            .padding()
                         }
-                        .padding()
+                    }
+                }
+                
+                HStack {
+                    VStack {
+                        ForEach(juice, id: \.self) { juices in
+                            HStack(spacing: 50) {
+                                ForEach(juices) { juice in
+                                    OrderButtonView(viewModel: viewModel, buttonName: "\(juice.rawValue) 주문", juice: juice)
+                                }
+                            }
+                        }
                     }
                 }
             }
