@@ -34,6 +34,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		436EBD6F2805A71200001155 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				43EBCA8E27FF2E8B003A3437 /* JuiceMakerAppApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		436EBD702805A71C00001155 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				43EBCA9027FF2E8B003A3437 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		436EBD712805A72200001155 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				436EBD6D2805A6B800001155 /* FruitStore.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		43EBCA8227FF2E8B003A3437 = {
 			isa = PBXGroup;
 			children = (
@@ -53,9 +77,9 @@
 		43EBCA8D27FF2E8B003A3437 /* JuiceMakerApp */ = {
 			isa = PBXGroup;
 			children = (
-				43EBCA8E27FF2E8B003A3437 /* JuiceMakerAppApp.swift */,
-				43EBCA9027FF2E8B003A3437 /* ContentView.swift */,
-				436EBD6D2805A6B800001155 /* FruitStore.swift */,
+				436EBD6F2805A71200001155 /* App */,
+				436EBD702805A71C00001155 /* View */,
+				436EBD712805A72200001155 /* ViewModel */,
 				43EBCA9227FF2E8D003A3437 /* Assets.xcassets */,
 				43EBCA9427FF2E8D003A3437 /* Preview Content */,
 			);
