@@ -11,6 +11,7 @@ import Combine
 class FruitStore: ObservableObject {
     @Published var fruitStore = [Fruit: Int]()
     @Published var fruitBag = [Fruit: Int]()
+    @Published var recipe = [Juice: String]()
     
     private var cancellables = [AnyCancellable]()
     
