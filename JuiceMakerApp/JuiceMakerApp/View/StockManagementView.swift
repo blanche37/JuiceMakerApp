@@ -7,14 +7,15 @@
 
 import SwiftUI
 
-struct StockManagementView: View {
+struct FruitManagementView: View {
+    @ObservedObject var viewModel: FruitStore
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct StockManagementView_Previews: PreviewProvider {
-    static var previews: some View {
-        StockManagementView()
+        HStack {
+            ForEach(Fruit.allCases) { fruit in
+                FruitView(fruit: fruit)
+                Spacer()
+            }
+        }
     }
 }
