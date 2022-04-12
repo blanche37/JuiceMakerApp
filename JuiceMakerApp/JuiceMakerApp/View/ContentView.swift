@@ -9,13 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        HStack {
+            ForEach(Fruit.allCases) { fruit in
+                ZStack {
+                    RoundedRectangle(cornerRadius: 20)
+                        .frame(width: 120, height: 180)
+                        .foregroundColor(.pink)
+                    FruitView(fruit: fruit)
+                }
+            }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewInterfaceOrientation(.landscapeLeft)
     }
 }
