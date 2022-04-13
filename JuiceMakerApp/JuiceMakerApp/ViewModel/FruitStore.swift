@@ -8,7 +8,15 @@
 import SwiftUI
 import Combine
 
-class FruitStore: ObservableObject {
+protocol ViewModel {
+    func substractStock(juice: Juice)
+    func calculateStock(fruit: Fruit, stock: Int)
+    func addStock(fruit: Fruit)
+    func minusStock(fruit: Fruit)
+    func resetStock()
+}
+
+class FruitStore: ObservableObject, ViewModel {
     @Published var fruitStore = [Fruit: Int]()
     @Published var fruitBag = [Fruit: Int]()
     @Published var recipe = [Juice: String]()

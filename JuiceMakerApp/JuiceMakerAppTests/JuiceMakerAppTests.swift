@@ -9,5 +9,5 @@ import XCTest
 @testable import JuiceMakerApp
 
 class JuiceMakerAppTests: XCTestCase {
-
+    
 }
