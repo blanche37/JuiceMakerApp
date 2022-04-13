@@ -16,12 +16,8 @@ class FruitStoreMock: ViewModel {
     
     private var cancellables = [AnyCancellable]()
     private var service: Service = JuiceMakerService()
-    
-    init() {
-        setValue()
-    }
 
-    private func setValue() {
+    func setValue() {
         let publisher = Fruit.allCases.publisher
 
          publisher.sink(receiveValue: { [weak self] fruit in
