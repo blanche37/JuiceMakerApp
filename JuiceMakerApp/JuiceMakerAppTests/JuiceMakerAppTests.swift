@@ -89,15 +89,13 @@ class JuiceMakerAppTests: XCTestCase {
         
         sleep(1)
         
-        // Case 3: mangoKiwiJuice 🥭 * 2 + 🥝 * 1 ---------------------
+        // Case 3: mangoKiwiJuice 🥭 * 2 + 🥝 * 1 ----------
         // when
         sut.substractStock(juice: .mangoKiwi)
         
         // then
         XCTAssertEqual(sut.fruitStore[.mango]!, 95)
         XCTAssertEqual(sut.fruitStore[.kiwi]!, 96)
-        
-        sleep(1)
     }
     
     func test_WhenStockManagementViewisDismissed_FruitBagsStockisAddedSuccessfully() {
