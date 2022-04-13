@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel = FruitStore()
+    @State var isPresent = false
     private var juice: [[Juice]] = [[.strawberry, .strawberryBanana, .mangoKiwi], [.banana, .pineapple, .mango, .kiwi]]
     
     var body: some View {
@@ -48,8 +49,21 @@ struct ContentView: View {
                     }
                 }
             }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        isPresent.toggle()
+                    } label: {
+                        Text("Recipe")
+                    }
+
+                }
+            }
             .navigationTitle("맛있는 쥬스를 만들어 드려요!")
         }
+        .sheet(isPresented: $isPresent, content: {
+            RecipeView()
+        })
         .navigationViewStyle(.stack)
     }
 }
