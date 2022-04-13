@@ -16,11 +16,22 @@
 		436EBD802805B27F00001155 /* StockManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436EBD7F2805B27F00001155 /* StockManagementView.swift */; };
 		43A086E62806000B004BDDAA /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A086E52806000B004BDDAA /* RecipeView.swift */; };
 		43A086E92806D796004BDDAA /* JuiceMakerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A086E82806D796004BDDAA /* JuiceMakerService.swift */; };
+		43A086F12806E2A4004BDDAA /* JuiceMakerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A086F02806E2A4004BDDAA /* JuiceMakerAppTests.swift */; };
 		43EBCA8F27FF2E8B003A3437 /* JuiceMakerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EBCA8E27FF2E8B003A3437 /* JuiceMakerAppApp.swift */; };
 		43EBCA9127FF2E8B003A3437 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EBCA9027FF2E8B003A3437 /* ContentView.swift */; };
 		43EBCA9327FF2E8D003A3437 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43EBCA9227FF2E8D003A3437 /* Assets.xcassets */; };
 		43EBCA9627FF2E8D003A3437 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43EBCA9527FF2E8D003A3437 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		43A086F22806E2A4004BDDAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43EBCA8327FF2E8B003A3437 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43EBCA8A27FF2E8B003A3437;
+			remoteInfo = JuiceMakerApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		436EBD6D2805A6B800001155 /* FruitStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitStore.swift; sourceTree = "<group>"; };
@@ -32,6 +43,8 @@
 		436EBD7F2805B27F00001155 /* StockManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockManagementView.swift; sourceTree = "<group>"; };
 		43A086E52806000B004BDDAA /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		43A086E82806D796004BDDAA /* JuiceMakerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMakerService.swift; sourceTree = "<group>"; };
+		43A086EE2806E2A4004BDDAA /* JuiceMakerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JuiceMakerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43A086F02806E2A4004BDDAA /* JuiceMakerAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMakerAppTests.swift; sourceTree = "<group>"; };
 		43EBCA8B27FF2E8B003A3437 /* JuiceMakerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuiceMakerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43EBCA8E27FF2E8B003A3437 /* JuiceMakerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMakerAppApp.swift; sourceTree = "<group>"; };
 		43EBCA9027FF2E8B003A3437 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +53,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		43A086EB2806E2A4004BDDAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		43EBCA8827FF2E8B003A3437 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -96,10 +116,19 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		43A086EF2806E2A4004BDDAA /* JuiceMakerAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				43A086F02806E2A4004BDDAA /* JuiceMakerAppTests.swift */,
+			);
+			path = JuiceMakerAppTests;
+			sourceTree = "<group>";
+		};
 		43EBCA8227FF2E8B003A3437 = {
 			isa = PBXGroup;
 			children = (
 				43EBCA8D27FF2E8B003A3437 /* JuiceMakerApp */,
+				43A086EF2806E2A4004BDDAA /* JuiceMakerAppTests */,
 				43EBCA8C27FF2E8B003A3437 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				43EBCA8B27FF2E8B003A3437 /* JuiceMakerApp.app */,
+				43A086EE2806E2A4004BDDAA /* JuiceMakerAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +167,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		43A086ED2806E2A4004BDDAA /* JuiceMakerAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43A086F42806E2A4004BDDAA /* Build configuration list for PBXNativeTarget "JuiceMakerAppTests" */;
+			buildPhases = (
+				43A086EA2806E2A4004BDDAA /* Sources */,
+				43A086EB2806E2A4004BDDAA /* Frameworks */,
+				43A086EC2806E2A4004BDDAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43A086F32806E2A4004BDDAA /* PBXTargetDependency */,
+			);
+			name = JuiceMakerAppTests;
+			productName = JuiceMakerAppTests;
+			productReference = 43A086EE2806E2A4004BDDAA /* JuiceMakerAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		43EBCA8A27FF2E8B003A3437 /* JuiceMakerApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43EBCA9927FF2E8D003A3437 /* Build configuration list for PBXNativeTarget "JuiceMakerApp" */;
@@ -164,6 +212,10 @@
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					43A086ED2806E2A4004BDDAA = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 43EBCA8A27FF2E8B003A3437;
+					};
 					43EBCA8A27FF2E8B003A3437 = {
 						CreatedOnToolsVersion = 13.3;
 					};
@@ -183,11 +235,19 @@
 			projectRoot = "";
 			targets = (
 				43EBCA8A27FF2E8B003A3437 /* JuiceMakerApp */,
+				43A086ED2806E2A4004BDDAA /* JuiceMakerAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		43A086EC2806E2A4004BDDAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		43EBCA8927FF2E8B003A3437 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -200,6 +260,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		43A086EA2806E2A4004BDDAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43A086F12806E2A4004BDDAA /* JuiceMakerAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		43EBCA8727FF2E8B003A3437 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,7 +288,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		43A086F32806E2A4004BDDAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43EBCA8A27FF2E8B003A3437 /* JuiceMakerApp */;
+			targetProxy = 43A086F22806E2A4004BDDAA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		43A086F52806E2A4004BDDAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QPQ25C8RHP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yun.JuiceMakerAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JuiceMakerApp.app/JuiceMakerApp";
+			};
+			name = Debug;
+		};
+		43A086F62806E2A4004BDDAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QPQ25C8RHP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yun.JuiceMakerAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JuiceMakerApp.app/JuiceMakerApp";
+			};
+			name = Release;
+		};
 		43EBCA9727FF2E8D003A3437 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -398,6 +510,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		43A086F42806E2A4004BDDAA /* Build configuration list for PBXNativeTarget "JuiceMakerAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43A086F52806E2A4004BDDAA /* Debug */,
+				43A086F62806E2A4004BDDAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		43EBCA8627FF2E8B003A3437 /* Build configuration list for PBXProject "JuiceMakerApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
