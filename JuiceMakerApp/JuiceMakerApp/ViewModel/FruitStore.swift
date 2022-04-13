@@ -22,9 +22,10 @@ class FruitStore: ObservableObject, ViewModel {
     @Published var recipe = [Juice: String]()
     
     private var cancellables = [AnyCancellable]()
-    private var service: Service = JuiceMakerService()
+    private var service: Service
     
-    init() {
+    init(service: Service) {
+        self.service = service
         setValue()
     }
     

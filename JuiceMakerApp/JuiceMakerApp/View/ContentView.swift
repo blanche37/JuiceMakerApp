@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var viewModel = FruitStore()
+    @StateObject var viewModel: FruitStore
+    
+    init(service: Service) {
+        _viewModel = StateObject(wrappedValue: FruitStore(service: service))
+    }
     @State var isPresent = false
     private var juice: [[Juice]] = [[.strawberry, .strawberryBanana, .mangoKiwi], [.banana, .pineapple, .mango, .kiwi]]
     
@@ -70,7 +74,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(service: JuiceMakerService())
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }

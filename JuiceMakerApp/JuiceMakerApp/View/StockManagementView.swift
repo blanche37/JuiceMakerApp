@@ -50,7 +50,7 @@ struct StockManagementView: View {
 
 struct StockManagementView_Previews: PreviewProvider {
     static var previews: some View {
-        StockManagementView(viewModel: FruitStore())
+        StockManagementView(viewModel: FruitStore(service: JuiceMakerService()))
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }

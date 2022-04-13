@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct JuiceMakerAppApp: App {
+    let service: Service = JuiceMakerService()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(service: service)
         }
     }
 }
